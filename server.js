@@ -17,7 +17,7 @@ app.use(cors({
   credentials: true                // ✅ Allow cookies
 }));
 
-app.options("*", cors())
+
 app.use(express.json())
 
 
