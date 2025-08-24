@@ -11,10 +11,13 @@ require('dotenv').config();
 
 const app = express();
 app.use(cookieParser())
+
 app.use(cors({
  origin: ['https://musicquestro-web.vercel.app'], 
   credentials: true                // ✅ Allow cookies
 }));
+
+app.options("*", cors())
 app.use(express.json())
 
 
